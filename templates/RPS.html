@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rock Paper Scissors</title>
+</head>
+<body>
+    <h1>Rock Paper Scissors Game</h1>
+    <form action="{{ url_for('PPT') }}" method="post">
+        <button type="submit" name="choice" value="rock">
+            <img src="{{ url_for('static', filename='media/rock.svg') }}" alt="rock" width="50" height="50">
+        </button>
+        <button type="submit" name="choice" value="paper">
+            <img src="{{ url_for('static', filename='media/paper.svg') }}" alt="paper" width="50" height="50">
+        </button>
+        <button type="submit" name="choice" value="scissors">
+            <img src="{{ url_for('static', filename='media/scissors.svg') }}" alt="scissors" width="50" height="50">
+        </button>
+    </form>
+    <h1>Rock Paper Scissors Result</h1>
+    <p>You chose: {{ user_choice }}</p>
+    <p>Computer chose: {{ computer_choice }}</p>
+    <p>{{ result }}</p>
+    <a href="/">Play Again</a>
+</body>
+</html>
