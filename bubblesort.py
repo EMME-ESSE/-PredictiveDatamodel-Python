@@ -1,3 +1,6 @@
+# This function repeatedly compares adjacent elements and swaps them if they are in the wrong order to sort a list of numbers in ascending order.
+# lista is the list to be sorted.
+# Returns the sorted list.
 def bubbleSort(lista):
     n = len(lista)
 
